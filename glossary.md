@@ -23,7 +23,12 @@
 * A math scheme used to demonstrate the authenticity of a digital message or document
 * Created by using the sender's private key to encrypt a hash of the message 
 * The recipient can use the sender's public key to decrypt the hash. 
-* If the decrypted hash matches a new hash computed from the received message, it verifies that the message has not been altered and that it was sent by the owner of the private key. 
+* If the decrypted hash matches a new hash computed from the received message, it verifies that the message has not been altered (***integrity***) and that it was sent by the owner of the private key (***authenticity***). 
+* Normally, a digital signature is a package containing the following items: 
+    * **The Encrypted Hash**: This is the core "signature value" created by using the signer's private key.
+    * **Algorithm Identifiers**: Metadata that specifies the exact hashing and encryption algorithms used.
+    * **The Signer's Certificate**: the signer's public certificate, which ocntains their public key. This is needed to decrypt the hash. 
+    * **The Certificate Chain** (optional): Often, the certificates of the intermediate Certificate Authorities (CAs) are also included. This helps the verifier easily trace the signer's certificate back to a trusted root authority.  
 
 ## Public-Private Key Encryption Use Cases
 Public-private key encryption can be used in two ways (shown below). Note that the first use case is using the public key to encrypt and private to decrypt and the second use case is doing it the other way around (using the private key to encrypt and public key to decrypt). 
