@@ -37,7 +37,7 @@ Public-private key encryption can be used in two ways (shown below). Note that t
 * Suppose Cindy also has Bob's public key. However, Alice's encrypted message can only be decrypted using Bob's private key. 
 * Public-private key encryption is a one way street. 
 
-### For Authentication 
+### For Authentication (Proving Identity via Digital Signatures)
 * Suppose Alice wants to send a legal contract to Bob. Upon receiving the contract, Bob needs to verify two things:
 1) ***Authenticity***: The contract really came from Alice.
 2) ***Integrity***: The contract wasn't altered in any way after Alice sent it.
